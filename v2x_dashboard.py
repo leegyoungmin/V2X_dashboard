@@ -8,9 +8,10 @@ from urllib.request import urlopen
 from streamlit_folium import st_folium
 from datetime import datetime, timedelta
 
-batchtime =  datetime.now() - timedelta(days=1)
-batchtime = batchtime.strftime("%y%m%d")
-data = pd.read_csv('state_speed_{}.csv'.format(batchtime))
+# 서버 통신을 구축하지 않았기 때문
+# batchtime =  datetime.now() - timedelta(days=1)
+# batchtime = batchtime.strftime("%y%m%d")
+data = pd.read_csv('240802.csv')
 data = data.loc[:,['vhcleTypeCd','vhcleSped','addr']]
 
 state_geo_path = 'https://raw.githubusercontent.com/southkorea/seoul-maps/master/kostat/2013/json/seoul_municipalities_geo_simple.json'
