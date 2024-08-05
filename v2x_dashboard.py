@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 
 # batchtime = datetime.now() - timedelta(days=1)
 # batchtime = batchtime.strftime("%y%m%d")
-data = pd.read_csv('/home/ubuntu/work/data/car_info/state_speed_240802.csv')
+data = pd.read_csv('state_speed_240802.csv')
 data = data.loc[:, ['vhcleTypeCd', 'vhcleSped', 'addr']]
 
 state_geo_path = 'https://raw.githubusercontent.com/southkorea/seoul-maps/master/kostat/2013/json/seoul_municipalities_geo_simple.json'
